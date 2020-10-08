@@ -1,0 +1,66 @@
+// imports @font-face definiton
+@import "../style/fonts";
+
+.welcomeMessage {
+  font-family: myriad-pro-regular, sans-serif;
+  font-size: 1.125rem;
+  font-weight: 400;
+  margin: 0 0.5em;
+  display: inline-flex;
+  min-height: 130px;
+  max-width: fit-content;
+
+  .box {
+    height: fit-content;
+    width: calc(100% - 30px);
+    border: 4px solid #eebb11;
+    padding: 15px;
+    position: relative;
+    border-radius: 10px;
+
+    :before {
+      content: "";
+      width: 0px;
+      height: 0px;
+      position: absolute;
+      border-left: 10px solid #eebb11;
+      border-right: 10px solid transparent;
+      border-top: 10px solid #eebb11;
+      border-bottom: 10px solid transparent;
+      right: -20px;
+      top: 30px;
+    }
+
+    :after {
+      content: "";
+      width: 0px;
+      height: 0px;
+      position: absolute;
+      border-left: 7px solid #fff;
+      border-right: 7px solid transparent;
+      border-top: 7px solid #fff;
+      border-bottom: 7px solid transparent;
+      right: -11px;
+      top: 34px;
+    }
+
+    .greeting {
+      font-weight: 900;
+    }
+
+    .randomFact {
+      font-weight: 500;
+      font-size: 1rem;
+      margin-top: 3px;
+      display: block;
+
+      .label {
+        font-weight: 600;
+      }
+    }
+  }
+
+  img {
+    margin-left: 10px;
+  }
+}
