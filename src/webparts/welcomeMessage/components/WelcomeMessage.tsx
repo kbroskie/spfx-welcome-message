@@ -102,9 +102,8 @@ export default class WelcomeMessage extends React.Component<IWelcomeMessageProps
 
   public render (): React.ReactElement<IWelcomeMessageProps> {
     const siteUrl = this.state.currentContext.pageContext.site.absoluteUrl;
+    const imagePath = '/SiteAssets/skully.png';
 
-    const imagePath = '/SiteAssets/skully.jpg';
-console.log (siteUrl);
     return (
       <div className={styles.welcomeMessage}>
         <div className={styles.box}>
