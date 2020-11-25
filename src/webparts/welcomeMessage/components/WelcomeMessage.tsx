@@ -33,6 +33,11 @@ export default class WelcomeMessage extends React.Component<IWelcomeMessageProps
    * Load the data after the initial page load.
    */
   public componentDidMount () {
+    this.setState ({ 
+      userFirstName: this.state.currentContext._pageContext.user.displayName,
+      currentTimeOfDay: this.getCurrentTimeOfDay ()
+    });
+
     try {
       /**
        * Invoke the actions to get the current logged in user's data and a random fact.
@@ -70,11 +75,10 @@ export default class WelcomeMessage extends React.Component<IWelcomeMessageProps
    * Stores the user's first name and a string containing the current time of day in the state variables.
    */
   public setRandomFactData = () => {  
-    console.log (WelcomeMessageStore.randomFactArray['text']);
     try {
       this.setState ({ randomFact: WelcomeMessageStore.randomFactArray['text'] });
     } catch (e) {
-      console.log ('setUserGreetingData', e);
+      console.log ('setRandomFactData', e);
     }  
   }
 

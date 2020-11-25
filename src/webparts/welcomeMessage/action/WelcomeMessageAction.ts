@@ -18,16 +18,14 @@ const getUserData = async (currentContext: any) => {
         mode: "cors"
     };
 
-    const apiUrl = 'https://millersvilleuniversity.sharepoint.com/sites/myVILLEDev/_api/SP.UserProfiles.PeopleManager/GetMyProperties/UserProfileProperties/';
+    const apiUrl = 'https://millersvilleuniversity.sharepoint.com/_api/SP.UserProfiles.PeopleManager/GetMyProperties/UserProfileProperties/';
 
     try {
         // Get the current user's profile data.
         currentContext.httpClient.get (apiUrl,
             HttpClient.configurations.v1, httpClientOptions)
             .then ( (res: HttpClientResponse) => {
-                res.json ().then ( (responseJson: any) => {
-                    console.log (responseJson);
-    
+                res.json ().then ( (responseJson: any) => {    
                     let dispatchObj = { type: "userData", value: responseJson };
                     Dispatcher.dispatch (dispatchObj);
                 });
@@ -69,9 +67,7 @@ const getRandomFact = async (currentContext: any) => {
         currentContext.httpClient.get (apiUrl,
             HttpClient.configurations.v1, httpClientOptions)
             .then ( (res: HttpClientResponse) => {
-                res.json ().then ( (responseJson: any) => {
-                    console.log (responseJson);
-    
+                res.json ().then ( (responseJson: any) => {    
                     let dispatchObj = { type: "randomFact", value: responseJson };
                     Dispatcher.dispatch (dispatchObj);
                 });
