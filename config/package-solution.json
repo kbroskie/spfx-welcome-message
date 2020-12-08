@@ -3,13 +3,13 @@
   "solution": {
     "name": "welcome-message-client-side-solution",
     "id": "1429f342-7277-4754-8c6a-af6c55cb77fa",
-    "version": "1.0.0.0",
+    "version": "1.1.0.0",
     "includeClientSideAssets": true,
     "isDomainIsolated": false,
     "developer": {
-      "name": "",
-      "websiteUrl": "",
-      "privacyUrl": "",
+      "name": "Millersville University",
+      "websiteUrl": "https://www.millersville.edu",
+      "privacyUrl": "https://www.millersville.edu/infotech/it-privacy-notice.php",
       "termsOfUseUrl": "",
       "mpnId": ""
     }
